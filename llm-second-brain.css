@@ -1,0 +1,225 @@
+/* ============================================================
+   LLM Second Brain Stylesheet
+   Obsidian second brain — callouts, tables, progress bar, Inter font
+   ============================================================ */
+
+/* ── Font import ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+  --font-text: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+  font-family: var(--font-text);
+}
+
+.markdown-preview-view,
+.cm-editor {
+  font-family: var(--font-text) !important;
+}
+
+code, pre, .cm-inline-code {
+  font-family: var(--font-monospace) !important;
+  font-size: 0.85em;
+}
+
+/* ── Base readability ──────────────────────────────────────── */
+.markdown-preview-view {
+  --line-width: 780px;
+  --font-text-size: 16px;
+  line-height: 1.75;
+}
+
+/* ── Headings ──────────────────────────────────────────────── */
+.markdown-preview-view h1 {
+  font-size: 2em;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 6px;
+  margin-bottom: 1em;
+}
+.markdown-preview-view h2 {
+  font-size: 1.5em;
+  border-bottom: 1.5px solid var(--background-modifier-border);
+  padding-bottom: 4px;
+  color: var(--color-accent);
+}
+.markdown-preview-view h3 {
+  font-size: 1.2em;
+  color: var(--text-accent);
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+.markdown-preview-view table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+  font-size: 0.93em;
+}
+.markdown-preview-view th {
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+.markdown-preview-view td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view tr:nth-child(even) td {
+  background-color: var(--background-secondary);
+}
+.markdown-preview-view tr:hover td {
+  background-color: var(--background-modifier-hover);
+}
+
+/* ── Callouts ───────────────────────────────────────────────── */
+/* Note — steel blue */
+.callout[data-callout="note"] {
+  --callout-color: 70, 130, 200;
+  --callout-icon: lucide-info;
+}
+/* Info — sky */
+.callout[data-callout="info"] {
+  --callout-color: 30, 160, 220;
+}
+/* Tip / success — green */
+.callout[data-callout="tip"],
+.callout[data-callout="success"] {
+  --callout-color: 50, 180, 100;
+}
+/* Warning — amber */
+.callout[data-callout="warning"] {
+  --callout-color: 220, 150, 30;
+}
+/* Danger / error — red */
+.callout[data-callout="danger"],
+.callout[data-callout="error"] {
+  --callout-color: 210, 60, 60;
+}
+/* Example — purple */
+.callout[data-callout="example"] {
+  --callout-color: 140, 90, 200;
+}
+/* Abstract / summary — teal */
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"] {
+  --callout-color: 40, 190, 170;
+}
+/* Quote — warm grey */
+.callout[data-callout="quote"] {
+  --callout-color: 130, 120, 110;
+}
+
+/* Callout body font size */
+.callout-content {
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+
+/* ── Inline code (key terms) ────────────────────────────────── */
+.markdown-preview-view code {
+  background-color: rgba(var(--color-accent-rgb), 0.12);
+  color: var(--color-accent);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.88em;
+}
+
+/* ── Blockquote (lesson quotes) ─────────────────────────────── */
+.markdown-preview-view blockquote {
+  border-left: 4px solid var(--color-accent);
+  background: var(--background-secondary);
+  border-radius: 0 6px 6px 0;
+  padding: 10px 16px;
+  margin: 1em 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* ── Tags ────────────────────────────────────────────────────── */
+.tag {
+  background-color: rgba(var(--color-accent-rgb), 0.15) !important;
+  color: var(--color-accent) !important;
+  border: 1px solid rgba(var(--color-accent-rgb), 0.3) !important;
+  border-radius: 12px !important;
+  padding: 1px 8px !important;
+  font-size: 0.8em !important;
+}
+
+/* ── Bold — make key terms pop ──────────────────────────────── */
+.markdown-preview-view strong {
+  color: var(--text-normal);
+  font-weight: 700;
+}
+
+/* ── Mermaid diagram centering ──────────────────────────────── */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+/* ── Task checkboxes ────────────────────────────────────────── */
+.markdown-preview-view .task-list-item-checkbox {
+  margin-right: 6px;
+}
+input[type="checkbox"]:checked + span {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* ── Graph view node colors ─────────────────────────────────── */
+.graph-view.color-fill-tag { color: #7bc67e; }
+.graph-view.color-fill-attachment { color: #f0a500; }
+
+/* ── Quiz / prep page accent banner ─────────────────────────── */
+.markdown-preview-view h1:first-of-type {
+  background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.08) 0%, transparent 100%);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-bottom: none;
+}
+
+/* ── Reading progress bar ───────────────────────────────────── */
+/* Named scroll-timeline targets the actual Obsidian scroll containers */
+
+@keyframes reading-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Reading mode — .markdown-reading-view is the true scroll container */
+.markdown-reading-view {
+  scroll-timeline: --note-scroll y;
+}
+.markdown-reading-view::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, #a78bfa 100%);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  animation: reading-progress linear both;
+  animation-timeline: --note-scroll;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Live-preview / source mode — .cm-scroller is the true scroll container */
+.cm-scroller {
+  scroll-timeline: --editor-scroll y;
+}
+.cm-scroller::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, #a78bfa 100%);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  animation: reading-progress linear both;
+  animation-timeline: --editor-scroll;
+  z-index: 9999;
+  pointer-events: none;
+}

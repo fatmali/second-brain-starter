@@ -1,0 +1,15 @@
+{
+  "promptDelete": true,
+  "defaultViewMode": "preview",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "assets",
+  "spellcheck": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showFrontmatter": false,
+  "livePreview": true,
+  "legacyEditor": false
+}

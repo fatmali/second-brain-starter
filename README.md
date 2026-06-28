@@ -1,4 +1,4 @@
-# 🧠 LLM Second Brain: Obsidian + Claude Setup
+# 🧠 LLM Second Brain: Obsidian + Agents Setup
 
 A persistent, compounding knowledge base built on the [Karpathy LLM-Wiki pattern](https://karpathy.github.io/).
 The LLM writes and maintains all files. You curate, explore, and ask questions.

@@ -6,6 +6,10 @@ The wiki grows richer with every source ingested and every question asked.
 
 Built for: **coursework · software engineering · research · anything you want to think deeply about.**
 
+<img width="1508" height="946" alt="image" src="https://github.com/user-attachments/assets/ebae5c58-dbcb-40c2-bab8-2ec199cecc82" />
+<img width="1272" height="883" alt="image" src="https://github.com/user-attachments/assets/fd29af1b-a936-441e-bd2d-4df05b0eedda" />
+
+
 ---
 
 ## Files in this gist
